@@ -1,6 +1,5 @@
 package kata.domain.rate;
 
-import com.github.javafaker.Faker;
 import kata.domain.user.UserId;
 import kata.domain.user.UserIdDummy;
 
@@ -14,7 +13,7 @@ public class RateDummy {
     public static RateBuilder randomRate() {
 
         return createRate()
-                .withTitle(Faker.instance().funnyName().name())
+                .withTitle("funnyName")
                 .withScore(randomNumber.nextInt(5) + 1)
                 .withUserId(UserIdDummy.randomUserId());
     }

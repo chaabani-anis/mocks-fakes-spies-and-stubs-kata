@@ -1,6 +1,6 @@
 package kata.domain.film;
 
-import com.github.javafaker.Faker;
+//import com.github.javafaker.Faker;
 
 import java.time.Duration;
 import java.util.Arrays;
@@ -10,10 +10,10 @@ public class FilmDummy {
 
     public static FilmBuilder randomFilm() {
         return create()
-                .withTitle(Faker.instance().starTrek().character())
-                .withCategories(Arrays.asList(Faker.instance().beer().hop(), Faker.instance().beer().malt()))
-                .withDuration(Duration.ofMinutes(Faker.instance().number().randomDigitNotZero()))
-                .withReleaseDate(Faker.instance().number().randomDigitNotZero());
+                .withTitle("starTrek")
+                .withCategories(Arrays.asList("hop", "malt"))
+                .withDuration(Duration.ofMinutes(90))
+                .withReleaseDate(80);
     }
 
     public static FilmBuilder create() {

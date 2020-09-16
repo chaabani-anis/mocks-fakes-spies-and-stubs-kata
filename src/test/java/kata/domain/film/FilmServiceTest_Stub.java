@@ -1,6 +1,5 @@
 package kata.domain.film;
 
-import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
@@ -16,7 +15,7 @@ public class FilmServiceTest_Stub {
     void shouldReturnAFilmAtRepository() {
         final FilmService filmService = new FilmService(new FilmRepositoryReturningValue_Stub());
 
-        final String title = Faker.instance().funnyName().name();
+        final String title = "funnyName";
         assertEquals(randomFilm, filmService.findById(title).get());
     }
 
@@ -24,7 +23,7 @@ public class FilmServiceTest_Stub {
     void shouldReturnAnEmptyOptionalWhenItIsNotPresent() {
         final FilmService filmService = new FilmService(new FilmRepositoryReturningEmpty_Stub());
 
-        final String title = Faker.instance().funnyName().name();
+        final String title = "funnyName";
         assertFalse(filmService.findById(title).isPresent());
     }
 

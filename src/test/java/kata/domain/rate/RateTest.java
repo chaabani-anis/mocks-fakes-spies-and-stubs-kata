@@ -1,6 +1,5 @@
 package kata.domain.rate;
 
-import com.github.javafaker.Faker;
 import kata.domain.user.UserId;
 import kata.domain.user.UserIdDummy;
 import org.junit.jupiter.api.Test;
@@ -9,7 +8,7 @@ import static kata.domain.rate.RateDummy.randomRate;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class RateTest {
-    private static final String title = Faker.instance().funnyName().name();
+    private static final String title = "funnyName";
 
     @Test
     void ratingCannotBeLessThan1() {
